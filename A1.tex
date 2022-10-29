@@ -1,0 +1,77 @@
+
+\documentclass{article}
+\title{COMP8123 \quad Assignment 1}
+\author{feng xiaomei \quad P-22-0949-2}
+\date{Oct 29 2022}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\begin{document}
+\maketitle
+
+\textbf{1. Solution: }The usual addition on $\mathbb{R}$ and $\mathbb{C}$ are commutative and associative, while scalar multiplication on $\mathbb{R}$ and $\mathbb{C}$ are also associative and distributive. For $\mathbb{R}$, the zero vector is {$0_R$} = 0 $\in$ $\mathbb{R}$, the identity scalar is {$1_\mathbb{R}$} = 1 $\in$ $\mathbb{R}$ and the additive inverse is $-$x for any x $\in$ $\mathbb{R}$. For $\mathbb{C}$, the zero vector is {$0_\mathbb{C}$} = 0 + {$0_i$} $\in$ $\mathbb{C}$, the identity scalar is {$1_\mathbb{C}$} = 1 + {$0_i$} $\in$ $\mathbb{C}$ and the additive inverse is $-$z for all z $\in$ $\mathbb{C}$.
+\\
+\\
+\textbf{2. Solution: } Let X is an n-dimensional vector space, with a basis \{{$e_1$},...,{$e_n$}\}. Suppose any x $\in$ $\mathbb{X}$ has a representation as a linear combination of the basis vectors, we claim that the representation is unique. Indeed, if x $\in$ $\mathbb{X}$ has two representations
+$$
+x = {\alpha_1}{e_n}+...+{\alpha_1}{e_n}={\beta_1}{e_1}+...+{\beta_n}{e_n}.
+$$
+\\
+subtracting them gives
+\\
+$$
+({\alpha_j}-{\beta_j}){e_1}+...+({\alpha_n}-{\beta_n}){e_n}=\sum_{n}^{j=1}({\alpha_j}-{\beta_j}){e_j}=0.
+$$
+\\
+Since \{{$e_1$},...,{$e_n$}\}is a basis of X, by definition it is linearly independent, which implies that {$\alpha_j$}-{$\beta_j$} = 0 for all j = 1,...,n, i.e. the representation is unique.
+\\
+\\
+\textbf{3. Solution: } This is a simple exercise. We first verify vector addition:
+\\
+\begin{align*}
+    ({x_1},{x_2})+({y_1},{y_2})&=({x_1}+{y_1},{x_2}+{y_2})\\
+    &= ({y_1}+{x_1},{y_2}+{x_2})\\
+    &= ({y_1},{y_1})+({x_1},{x_2})\\
+    ({x_1},{x_2})+[({y_1},{y_2})+({z_1},{z_2})]&=\Big(({x_1}+({y_1}+{z_1}),{x_2}+({y_2}+{z_2})\Big)\\
+    &=\Big(({x_1}+{y_1})+{z_1},({x_2}+{y_2})+{z_2})\Big)\\
+    &=({x_1}+{y_1},{x_2}+{y_2})+({z_1},{z_2})\\
+    &=\Big[(({x_1},{x_2})+({y_1},{y_2})\Big]+({z_1},{z_2})\\
+    ({x_1},{x_2})&=({x_1}+0,{x_2}+0)\\
+    &=({x_1},{x_2})+(0,0)\\
+    (0,0)&=({x_1}+({-x_1}),{y_1}+(-{y_1}))\\
+    &=({x_1},{y_1})+(-{x_1},-{y_1})\\
+\end{align*}
+\\
+Next, we verify scalar vector multiplication:
+\\
+\begin{align*}
+    ({x_1},{x_2})&=({1_k}{x_1},{1_k}{x_2})\\
+    &={1_k}({x_1}{x_2})
+\end{align*}
+\begin{align*}
+    \alpha\Big[\beta({x_1},{x_2})\Big]&=\alpha(\beta{x_1},\beta{x_2})\\
+    &=\Big(\alpha(\beta({x_1}),\alpha(\beta{x_2})\Big)\\
+    &=\Big((\alpha\beta){x_1},(\alpha\beta){x_2})\Big)\\
+    &=(\alpha\beta)({x_1},{x_2})\\
+    \alpha\Big[({x_1},{x_2})+({y_1,y_2})\Big]&=\alpha({x_1}+{y_1},{x_2}+{y_2})\\
+    &=\Big(\alpha({x_1}+{y_1}),\alpha({x_2}+{y_2})\Big)\\
+    &=(\alpha{x_1}+\alpha{y_1},\alpha{x_2}+\alpha{y_2})\\
+    &=(\alpha{x_1},\alpha{y_1})+(\alpha{x_2}+\alpha{y_2})\\
+    &=\alpha({x_1},{y_1})+\alpha({x_2},{y_2})\\
+    (\alpha+\beta)({x_1,x_2})&=\Big((\alpha+\beta){x_1},(\alpha+\beta){x_2}\Big)\\
+    &=(\alpha{x_1}+\beta{x_1},\alpha{x_2}+\beta{x_2})\\
+    &=(\alpha{x_1},\alpha{x_2})+(\beta{x_1},\beta{x_2})\\
+    &=\alpha({x_1},{x_2})+\beta({x_1},{x_2})\\
+\end{align*}
+\\
+\\
+\textbf{4. Solution: }5. (N1) to (N3) are obvious. (N4) follows from the Cauchy-Schwarz inequality for sums, the proof is similar to that in Problem 3.
+\\
+7. (N1) to (N3) are obvious.(N4) follows from \textbf{Minkowski inequality for sums.} More precisely, for x =({$\xi_j$}) and y=({$\eta_j$}),\\
+\begin{align*}
+\|x+y\|=\Bigg(\sum_{j=1}^{\infty}|\xi_j+\eta_j|^p\Bigg)^\frac{1}{p}\leq\Bigg(\sum_{k=1}^{\infty}|\xi_k|^p\Bigg)^\frac{1}{p}+\Bigg(\sum_{m=1}^{\infty}|\eta_m|^p\Bigg)^\frac{1}{p}
+\end{align*}
+\\
+\\
+\end{document}
